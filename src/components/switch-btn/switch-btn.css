@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap');
+
+.swich-btn button {
+    background-color: rgba(151, 137, 137, 0.781);
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.swich-btn button:hover {
+    color: #fff;
+}

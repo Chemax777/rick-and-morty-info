@@ -1,0 +1,12 @@
+.location__details {
+    text-align: center;
+}
+
+.details__residents {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+    flex-shrink: 0;
+}

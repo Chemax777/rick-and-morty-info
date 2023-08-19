@@ -1,0 +1,18 @@
+.homepage {
+    width: 100vw;
+    height: 100vh;
+}
+
+.homepage__img {
+    margin-bottom: 16px;
+}
+
+.homepage__img>img {
+    display: block;
+    margin: 0 auto;
+}
+
+.homepage__search-feild {
+    margin: 0 auto;
+    width: 500px;
+}
