@@ -8,3 +8,23 @@
     line-height: 150%;
 }
 
+.search-results {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.search-results__item {
+    width: 98%;
+    padding: 3px;
+    border: 2px solid silver;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-family: Karla;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+

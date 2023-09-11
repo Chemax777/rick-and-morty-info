@@ -2,6 +2,7 @@ import Navigation from "../../components/navigation";
 import GoBack from "../../components/go-back";
 import InfoCards from "../../components/infoCards";
 import SwitchBtn from "../../components/switch-btn";
+import Loader from "../../components/loader";
 
 import { useEffect, useState } from "react";
 
@@ -15,6 +16,7 @@ function Character() {
     const [characters, setCharacters] = useState([])
     let [page, setPage] = useState(1)
     const [maxPage, setMaxPage] = useState(0)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         getData(`https://rickandmortyapi.com/api/character`)
@@ -22,6 +24,7 @@ function Character() {
                 setCharacters(data)
                 setMaxPage(data.info.pages)
             })
+        setLoading(false)
     }, [])
 
     useEffect(() => {
@@ -29,17 +32,21 @@ function Character() {
             .then(data => {
                 setCharacters(data)
             })
+        setLoading(false)
     }, [page])
 
     const nextPage = () => {
+        setLoading(true)
         setPage(page + 1)
     }
 
     const prevPage = () => {
+        setLoading(true)
         setPage(page - 1)
     }
 
     return (
+        loading ? <Loader/> :
         <>
             <Navigation></Navigation>
             <GoBack url={`/`}></GoBack>

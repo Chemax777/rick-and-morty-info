@@ -5,23 +5,27 @@ import { getData } from "../../methods/methods"
 import Navigation from "../../components/navigation"
 import GoBack from "../../components/go-back"
 import EpisodeInfo from "../../components/episode-info"
+import Loader from "../../components/loader"
 
 
 function EpisodeDetails({ url }) {
     const [episodeInfo, setEpisodeInfo] = useState([])
     const { id } = useParams()
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         getData(`${url}${id}`).then(data => {
             setEpisodeInfo(data)
         })
+        setLoading(false)
     }, [])
     return (
-        <>
-            <Navigation></Navigation>
-            <GoBack url={`/episode`}></GoBack>
-            <EpisodeInfo information={episodeInfo}></EpisodeInfo>
-        </>
+        loading ? <Loader /> :
+            <>
+                <Navigation></Navigation>
+                <GoBack url={`/episode`}></GoBack>
+                <EpisodeInfo information={episodeInfo}></EpisodeInfo>
+            </>
     )
 }
 
