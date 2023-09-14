@@ -6,3 +6,12 @@
     padding: 30px;
     flex-shrink: 0;
 }
+
+@media screen and (max-width: 630px) {
+    .location__info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+    }
+}

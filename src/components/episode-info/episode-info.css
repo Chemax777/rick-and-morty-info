@@ -1,3 +1,11 @@
 .episode__details {
     text-align: center;
 }
+
+@media screen and (max-width:560px) {
+    .details__residents {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
