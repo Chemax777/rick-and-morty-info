@@ -3,10 +3,12 @@
 }
 
 .details__residents {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 30px;
-    flex-shrink: 0;
+    margin: 1rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: center;
+    gap: 25px
 }

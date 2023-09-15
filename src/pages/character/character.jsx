@@ -46,21 +46,23 @@ function Character() {
     }
 
     return (
-        loading ? <Loader/> :
-        <>
-            <Navigation></Navigation>
-            <GoBack url={`/`}></GoBack>
-            <div className="character__info">
-                <InfoCards information={characters}></InfoCards>
-            </div>
-            <div className="switchers">
-                {page !== 1 ? <SwitchBtn text={`🠔 Prev page`} clickEvent={prevPage}></SwitchBtn> : null}
-                <div className="pages-counter">
-                    <span className="pages-counter__current">{page} of {maxPage}</span>
+        loading ? <Loader /> :
+            <>
+                <div className="container">
+                    <Navigation></Navigation>
+                    <GoBack url={`/`}></GoBack>
+                    <div className="character__info">
+                        <InfoCards information={characters}></InfoCards>
+                    </div>
+                    <div className="switchers">
+                        {page !== 1 ? <SwitchBtn text={`🠔 Prev page`} clickEvent={prevPage}></SwitchBtn> : null}
+                        <div className="pages-counter">
+                            <span className="pages-counter__current">{page} of {maxPage}</span>
+                        </div>
+                        {page < maxPage ? <SwitchBtn text={`Next page 🠖`} clickEvent={nextPage}></SwitchBtn> : null}
+                    </div>
                 </div>
-                {page < maxPage ? <SwitchBtn text={`Next page 🠖`} clickEvent={nextPage}></SwitchBtn> : null}
-            </div>
-        </>
+            </>
     )
 }
 
