@@ -48,8 +48,8 @@ function Character() {
     return (
         loading ? <Loader /> :
             <>
+                <Navigation></Navigation>
                 <div className="container">
-                    <Navigation></Navigation>
                     <GoBack url={`/`}></GoBack>
                     <div className="character__info">
                         <InfoCards information={characters}></InfoCards>

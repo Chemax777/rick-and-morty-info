@@ -44,8 +44,8 @@ function Episode() {
     return (
         loading ? <Loader /> :
             <>
+                <Navigation></Navigation>
                 <div className="container">
-                    <Navigation></Navigation>
                     <GoBack url={`/`}></GoBack>
                     <div className="episode__info">
                         <EpisodeCards information={episodes}></EpisodeCards>

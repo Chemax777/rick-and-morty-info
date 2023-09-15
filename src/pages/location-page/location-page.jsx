@@ -45,8 +45,8 @@ function LocationPage() {
     return (
         loading ? <Loader /> :
             <>
+                <Navigation></Navigation>
                 <div className="container">
-                    <Navigation></Navigation>
                     <GoBack url={`/`}></GoBack>
                     <div className="location__info">
                         <LocationCards information={locations}></LocationCards>
